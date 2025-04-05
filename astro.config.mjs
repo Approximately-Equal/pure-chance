@@ -10,7 +10,7 @@ import remarkSmartypants from "remark-smartypants";
 import vercel from "@astrojs/vercel";
 // https://astro.build/config
 export default defineConfig({
-  site: "https://pure-chance.io",
+  site: "https://pure-chance.xyz",
 
   markdown: {
     remarkPlugins: [

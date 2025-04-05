@@ -10,6 +10,15 @@ ul.archive {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
+        a {
+            text-align: left;
+        }
+
+        time {
+            text-align: right;
+            min-width: 120px;
+        }
     }
 }
 
