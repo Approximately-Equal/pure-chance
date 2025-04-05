@@ -1,0 +1,24 @@
+@use "./variables" as *;
+
+// Mixin to generate CSS variables from a theme map
+@mixin theme($theme-map, $important: false) {
+    @each $key, $value in $theme-map {
+        --#{$key}: #{$value}
+            #{if(
+                $important,
+                "!important",
+                ""
+            )}; // Converts Sass map keys into CSS variables
+    }
+}
+
+// Mixin to style svg icon
+@mixin svg-icon($size, $color-accent) {
+    width: $size;
+    height: $size;
+    fill: var(--color-primary) !important;
+    &:hover {
+        color: $color-accent;
+        background: var(--color-base);
+    }
+}

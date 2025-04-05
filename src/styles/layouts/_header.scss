@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+body > header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: dashed 1px;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+body > header nav {
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    gap: 10px;
+}
+
+body > header a {
+    text-decoration: none;
+}

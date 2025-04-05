@@ -1,0 +1,42 @@
+// fonts
+$base-font-size: 1.25rem;
+$font-stack: "Alegreya", "garamond", "times", serif;
+$font-monospace:
+    "Space Mono", "Source Code Pro", "consolas", "courier new", monospace;
+
+// themes
+$light-theme: (
+    // base
+    color-base: hsl(0, 0%, 100%),
+    color-surface: hsl(45, 22%, 96%),
+    color-text: hsl(0, 0%, 0%),
+    // accents
+    color-primary: hsl(217, 92%, 76%),
+    color-secondary: hsl(170, 57%, 73%),
+    color-mark: hsl(41, 86%, 83%),
+    // colors
+    color-red: hsl(343, 81%, 75%),
+    color-orange: hsl(23, 92%, 75%),
+    color-yellow: hsl(41, 86%, 83%),
+    color-green: hsl(115, 54%, 76%),
+    color-blue: hsl(217, 92%, 76%),
+    color-purple: hsl(232, 97%, 85%)
+);
+
+$dark-theme: (
+    // base
+    color-base: hsl(0, 0%, 10%),
+    color-surface: hsl(45, 22%, 96%),
+    color-text: hsl(0, 0%, 100%),
+    color-mark: hsl(41, 86%, 83%),
+    // accents
+    color-primary: hsl(217, 92%, 76%),
+    color-secondary: hsl(170, 57%, 73%),
+    // colors
+    color-red: hsl(343, 81%, 75%),
+    color-orange: hsl(23, 92%, 75%),
+    color-yellow: hsl(41, 86%, 83%),
+    color-green: hsl(115, 54%, 76%),
+    color-blue: hsl(217, 92%, 76%),
+    color-purple: hsl(232, 97%, 85%)
+);

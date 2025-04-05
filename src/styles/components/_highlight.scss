@@ -1,0 +1,8 @@
+body::selection {
+    background-color: var(--color-mark);
+}
+
+body::-moz-selection {
+    // Firefox
+    background-color: var(--color-mark);
+}

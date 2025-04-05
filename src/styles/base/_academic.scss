@@ -1,0 +1,13 @@
+/* academic text style */
+main {
+    text-align: left;
+}
+
+p {
+    line-height: 1.25;
+    margin: 0;
+}
+
+p + p {
+    text-indent: 2em;
+}

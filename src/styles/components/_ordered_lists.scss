@@ -1,0 +1,12 @@
+ol {
+    list-style: none;
+    counter-reset: list-counter;
+
+    li {
+        counter-increment: list-counter;
+    }
+
+    li::marker {
+        content: "[" counter(list-counter) "] ";
+    }
+}

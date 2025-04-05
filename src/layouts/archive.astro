@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/base.astro";
+const { articles, classTag, title, authors, description, keywords } =
+    Astro.props;
+---
+
+<BaseLayout
+    title={title}
+    authors={authors}
+    description={description}
+    keywords={keywords}
+>
+    <ul class={`${classTag} archive`}>
+        {
+            articles.map((article: any) => (
+                <li>
+                    <a href={`/t/${article.id}`}>{article.data.title}</a>
+                    <time
+                        datetime={article.data.dates.published
+                            .toISOString()
+                            .split("T")[0]
+                            .trim()}
+                    >
+                        {article.data.dates.published
+                            .toISOString()
+                            .split("T")[0]
+                            .trim()}
+                    </time>
+                </li>
+            ))
+        }
+    </ul>
+</BaseLayout>

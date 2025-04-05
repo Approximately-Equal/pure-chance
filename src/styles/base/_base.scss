@@ -1,0 +1,98 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+html {
+    background-color: var(--color-base);
+    color: var(--color-text);
+    text-align: center;
+}
+
+body {
+    display: inline-block;
+    font-family: $font-stack;
+    width: calc(min(800px, 90vw));
+}
+
+p,
+center,
+a,
+li,
+span,
+blockquote,
+figcaption {
+    font-size: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.75rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.25rem;
+}
+h5 {
+    font-size: 1.125rem;
+}
+h6 {
+    font-size: 1rem;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+    margin-top: 0.25em;
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+    margin-top: 0.4em;
+}
+
+code,
+pre,
+kbd,
+samp {
+    font-family: $font-monospace;
+    font-size: 1rem;
+}
+
+// Make lists have proper spacing.
+main ol,
+main ul {
+    li {
+        padding-bottom: 10px;
+    }
+    :last-child {
+        padding-bottom: 0;
+    }
+}
+
+// Make marks have proper background color.
+mark {
+    background-color: var(--color-mark);
+}
+
+// Make blockquotes have italic style.
+blockquote {
+    font-style: italic;
+}

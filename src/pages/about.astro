@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/base.astro";
+import Project from "../components/project.astro";
+---
+
+<BaseLayout title="About" keywords={["about"]}>
+    <section class="introduction">
+        <h1>Welcome</h1>
+        <p>
+            Hello, I'm Chance, and welcome to my corner of the internet. I'm a statistics (and computer science) student with a passion for a vast array of things: computational statistics, linguistics, social choice, game theory, fanfiction, a good video essay, and much more.
+        </p>
+        <p>
+            In my free time, I develop my web scraping and archival project
+            <a href="https://github.com/Approximately-Equal/AOchivist"
+                >AOchivist</a
+            > as well as my computational social choice library (and undergraduate
+            thesis project) <a
+                href="https://github.com/Approximately-Equal/Kingmaker"
+                >Kingmaker</a
+            >.
+        </p>
+        <p>
+            I also have a <a href="/blog">blog</a> where I write about math, computer
+            science, and statistics. Sometimes I even try and fail to write thoughtful
+            media analysis. I've written such work as: solving the game of greed
+            (out of spite), catching fictional supervillains with Bayesian inference,
+            and ranting about portrayals of nuclear weapons (and war) in media.
+        </p>
+    </section>
+    <section class="projects archive">
+        <h2>Projects</h2>
+        <Project title="Kingmaker">
+            <p>
+                Kingmaker is a modular, performant, social choice framework for
+                the simulation, computation, and analysis of strategic voting.
+                It has a focus on the study of strategic or tactical voting,
+                which is concerned questions such as:
+            </p>
+            <ul>
+                <li>
+                    Which strategies are most effective (for each voting
+                    method)?
+                </li>
+                <li>How much do they impact election outcomes?</li>
+                <li>Which voting methods minimize strategic voting?</li>
+                <li>and more</li>
+            </ul>
+        </Project>
+        <Project title="AOchivist">
+            <p>
+                AOchivist /ˌeɪː.oʊː.ˈkaɪvɪst/ is a local archive for AO3. It can
+                download works, bookmarks, subscriptions, marked for later, and
+                more. It can display works in multiple formats, including html,
+                epub, pdf, and plain text.
+            </p>
+            <p>
+                Disclaimer: AOchivist claims no relation to <em
+                    >The Ancient Ones</em
+                > (<em>AO-chan</em>). Please don't smite me.
+            </p>
+        </Project>
+    </section>
+    <section class="adventures">
+        <h2>Adventures</h2>
+        <ul>
+            <li>
+                I walked across my home county of Marin over the span of a week.
+                I started at The Golden Gate Bridge, traversed across the
+                through the ..., over Loma Alta to <em>College of Marin</em>,
+                and finally over to ...
+            </li>
+            <li>
+                I circumnavigated Iceland, taking a hike, seeing a waterfall,
+                and relaxing at a hot spring every day. I saw a <em>lot</em> of sheep,
+                hiked to some incredible views (waterfalls), and cemented my love
+                for the soundtrack of <i>Garden State</i>.
+            </li>
+        </ul>
+    </section>
+</BaseLayout>

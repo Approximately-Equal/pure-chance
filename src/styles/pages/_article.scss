@@ -1,0 +1,45 @@
+.preface {
+    .meta {
+        margin: 0;
+        display: flex;
+        align-items: baseline;
+        gap: 0.5em;
+        text-transform: uppercase;
+        font-feature-settings: "lnum";
+
+        span {
+            font-size: 1rem;
+        }
+    }
+    padding-bottom: 1rem;
+    margin-bottom: 1.75rem;
+    border-bottom: 1.5px solid
+        color-mix(in hsl, var(--color-surface), var(--color-text) 10%);
+}
+
+#abstract {
+    padding: 20px;
+    border-radius: 4px;
+    background: var(--color-surface);
+
+    & h2 {
+        margin-top: 0;
+    }
+}
+
+#title {
+    margin-top: 0;
+}
+
+#subtitle {
+    margin-top: 0.5em;
+}
+
+.meta span:first-child {
+    margin-right: 0;
+}
+
+.meta span:not(:first-child)::before {
+    content: "•";
+    margin: 0 0.5em 0 0; /* Adjust spacing around the dot */
+}

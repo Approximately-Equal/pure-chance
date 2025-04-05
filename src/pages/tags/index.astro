@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../layouts/base.astro";
+import { getCollection } from "astro:content";
+
+// Fetch all articles and extract tags
+const allArticles = await getCollection("articles", ({ data }) => {
+    console.log("Articles Data:", data); // Debug the article data
+    return import.meta.env.PROD ? data.draft !== true : true;
+});
+
+const tags = [
+    ...new Set(allArticles.flatMap((article) => article.data.tags ?? [])),
+];
+---
+
+<BaseLayout title="Tags" description="Browse articles by tags">
+    <ul class="tags archive">
+        {
+            tags.map((tag) => (
+                <li>
+                    <a href={`/tags/${tag}/`}>{tag}</a>
+                </li>
+            ))
+        }
+    </ul>
+</BaseLayout>

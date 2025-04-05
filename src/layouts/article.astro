@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/base.astro";
+const { frontmatter, title, authors, description, keywords } = Astro.props;
+
+const published = Intl.DateTimeFormat("en-GB", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+}).format(frontmatter.dates.published);
+---
+
+<BaseLayout
+    title={title}
+    authors={authors}
+    description={description}
+    keywords={keywords}
+>
+    <div class="preface">
+        <div class="meta">
+            <span>{published}</span>
+            <span id="authors">By {frontmatter.authors.join(", ")}</span>
+        </div>
+        <h1 id="title">{frontmatter.title}</h1>
+        <p id="subtitle">{frontmatter.subtitle}</p>
+    </div>
+    {
+        frontmatter.abstract && (
+            <section id="abstract">
+                <h2>Abstract</h2>
+                <p>{frontmatter.abstract}</p>
+            </section>
+        )
+    }
+    <slot />
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/base.astro";
+import { getCollection } from "astro:content";
+const articles = (
+    await getCollection("articles", ({ data }) => {
+        return import.meta.env.PROD ? data.draft !== true : true;
+    })
+).sort(
+    (a, b) =>
+        b.data.dates.published.getTime() - a.data.dates.published.getTime(),
+);
+---
+
+<BaseLayout
+    title="Articles"
+    authors={["Chance Addis"]}
+    description="Archive of articles for Crescent Moon"
+    keywords={["articles"]}
+>
+    <ul class="articles archive">
+        {
+            articles.map((article: any) => (
+                <li>
+                    <a href={`/articles/${article.id}`}>{article.data.title}</a>
+                    <time
+                        datetime={article.data.dates.published
+                            .toISOString()
+                            .split("T")[0]
+                            .trim()}
+                    >
+                        {article.data.dates.published
+                            .toISOString()
+                            .split("T")[0]
+                            .trim()}
+                    </time>
+                </li>
+            ))
+        }
+    </ul>
+</BaseLayout>

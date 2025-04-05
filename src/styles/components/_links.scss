@@ -1,0 +1,11 @@
+// Make links pretty
+a {
+    text-decoration: underline 2px var(--color-primary);
+    text-underline-offset: 2px;
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+a:hover {
+    text-decoration: underline 4px var(--color-mark);
+}

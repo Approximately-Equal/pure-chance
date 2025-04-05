@@ -1,0 +1,27 @@
+{
+  "name": "pure-chance",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/markdoc": "^0.13.2",
+    "@astrojs/rss": "^4.0.11",
+    "astro": "^5.5.5",
+    "katex": "^0.16.21",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "remark-smartypants": "^3.0.2",
+    "sass": "^1.86.0"
+  },
+  "main": "index.js",
+  "author": "Chance Addis <chance.h.addis@proton.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "@frontendista/astro-html-minify": "^2.0.0"
+  }
+}
