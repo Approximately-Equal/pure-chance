@@ -7,9 +7,11 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 // markdown
 import remarkSmartypants from "remark-smartypants";
+import vercel from "@astrojs/vercel";
 // https://astro.build/config
 export default defineConfig({
   site: "https://pure-chance.io",
+
   markdown: {
     remarkPlugins: [
       remarkMath,
@@ -45,5 +47,7 @@ export default defineConfig({
       ],
     ],
   },
+
   integrations: [minify()],
+  adapter: vercel(),
 });

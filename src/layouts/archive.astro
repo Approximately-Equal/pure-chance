@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/base.astro";
-const { articles, classTag, title, authors, description, keywords } =
+const { articles, cssClass, title, authors, description, keywords } =
     Astro.props;
 ---
 
@@ -10,11 +10,11 @@ const { articles, classTag, title, authors, description, keywords } =
     description={description}
     keywords={keywords}
 >
-    <ul class={`${classTag} archive`}>
+    <ul class={`${cssClass} archive`}>
         {
             articles.map((article: any) => (
                 <li>
-                    <a href={`/t/${article.id}`}>{article.data.title}</a>
+                    <a href={`/articles/${article.id}`}>{article.data.title}</a>
                     <time
                         datetime={article.data.dates.published
                             .toISOString()
@@ -30,4 +30,5 @@ const { articles, classTag, title, authors, description, keywords } =
             ))
         }
     </ul>
+    <p>And you can get the rss feed at <a href="/rss.xml">/rss.xml</a></p>
 </BaseLayout>

@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../../layouts/base.astro";
+import ArchiveLayout from "../../layouts/archive.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -30,25 +30,11 @@ const { tag } = Astro.params;
 const { articles } = Astro.props;
 ---
 
-<BaseLayout>
-    <ul class={`${tag} archive`}>
-        {
-            articles.map((article: any) => (
-                <li>
-                    <a href={`/articles/${article.id}`}>{article.data.title}</a>
-                    <time
-                        datetime={article.data.dates.published
-                            .toISOString()
-                            .split("T")[0]
-                            .trim()}
-                    >
-                        {article.data.dates.published
-                            .toISOString()
-                            .split("T")[0]
-                            .trim()}
-                    </time>
-                </li>
-            ))
-        }
-    </ul>
-</BaseLayout>
+<ArchiveLayout
+    articles={articles}
+    cssClass={tag}
+    title={`Pure chance - ${tag}`}
+    authors={["Chance Addis"]}
+    description={`Articles with tag: ${tag}`}
+    keywords={[tag]}
+/>
